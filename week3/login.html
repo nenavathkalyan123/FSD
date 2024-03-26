@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Login page</title>
+          <style>
+                    fieldset{
+                   width:500px;
+                   background-color: antiquewhite;
+         }
+         table tr td{
+                   padding-top: 6px;
+                   padding-bottom: 6px;
+         }
+         body{
+                   background-color: bisque;
+         }
+
+
+         </style>
+         <script>
+          function validate(){
+          let fn=frm.uname.value;
+          for(let x in uname){
+                    let ch=fn1.charCodeAt(x);
+                    if(ch<65||ch>90&&ch<97||ch>122){
+                              alert("invalid username");
+                              return false;
+                    }
+          }
+          let pwd1=frm.pwd.value;
+          let pwd2=pwd1.length;
+          if(pwd>8){
+                    alert("password shouldnot exceed 8 digits");
+                    return false;
+          }
+          return true;
+          }</script>
+
+</head>
+<body>
+          <center>
+                    <h2>Login</h2>
+                    <form name="frm" method="post" action="abc.html" onsubmit="return validate()">
+                              <fieldset>
+                                        <table>
+                                                  
+                                                  <tr><td>UserName</td><td><input type="text" name="uname" value="" required/></td></tr>
+                                                  <tr><td>Password</td><td><input type="password" name="pwd" value="" required/></td></tr>
+                                                  
+                                        </table>
+                                        <input type="submit" name="submit" value="Login"/>
+
+                              </fieldset>
+
+                    </form>
+          </center>       
+          
+</body>
+</html>
